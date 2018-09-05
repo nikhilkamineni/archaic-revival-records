@@ -8,18 +8,18 @@
   - id: uuid
   - Name: char field
   - About: text field
-  - Releases: One-to-many field
   - Genre?: char field
   - Image?
 
 - Release
-  - id: uuid
-  - Title: char field
-  - Artist: uuid field
-  - Description: text field
+  - id: UUID Field
+  - Title: Char Field
+  - Artist: ForeignKey field
+  - About: Text field
+  - Year: IntField
   - Link: url field
-  - Album artwork: artwork link
-  - Tracks?: uuid field
+  - Album artwork: artwork link/image upload?
+  - Tracklist: ?
 
 - Track?
   - id: uuid
