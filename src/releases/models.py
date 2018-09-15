@@ -7,7 +7,7 @@ class Artist(models.Model):
     name = models.CharField(max_length=100)
     bio = models.TextField(blank=True)
     genre = models.CharField(max_length=100, blank=True)
-    # TODO: Image link
+    image = models.ImageField(null=True, blank=True)
 
 
 class Release(models.Model):
@@ -17,5 +17,5 @@ class Release(models.Model):
     about = models.TextField(blank=True)
     year = models.IntegerField(blank=True, null=True)
     # TODO: Streaming link
-    # TODO: Artwork link
+    # TODO: Artwork
     # TODO: Tracklist
