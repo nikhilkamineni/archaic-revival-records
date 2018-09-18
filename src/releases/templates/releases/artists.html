@@ -1,0 +1,12 @@
+<h1>Archaic Revival Records</h1>
+<h2>Artists</h2>
+
+{% if artists %}
+<ul>
+  {% for artist in artists %}
+  <li>{{artist.name}} - {{artist.genre}}</li>
+  {% endfor %}
+</ul>
+{% else %}
+  <p>No artists</p>
+{% endif %}

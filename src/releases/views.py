@@ -1,14 +1,22 @@
-from django.shortcuts import render
 from django.http import HttpResponse
+from django.shortcuts import render
+
+from .models import Artist, Release
 
 
 def index(request):
-    return HttpResponse("Welcome to Archaic Revival Records")
+    return render(request, "releases/index.html")
 
 
 def artists(request):
-    return HttpResponse("You're at the Artists page")
+    artists = Artist.objects.all()
+    context = {"artists": artists}
+
+    return render(request, "releases/artists.html", context)
 
 
 def releases(request):
-    return HttpResponse("You're at the Releases page")
+    releases = Release.objects.all()
+    context = {"releases": releases}
+
+    return render(request, "releases/releases.html", context)

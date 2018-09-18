@@ -1,0 +1,13 @@
+<h1>Archaic Revival Records</h1>
+<h2>Releases</h2>
+
+{% if releases %}
+<ul>
+  {% for release in releases %}
+  <li>{{release.artist}} - {{release.title}}</li>
+  {% endfor %}
+</ul>
+
+{% else %}
+<p>There are no releases</p>
+{% endif %}
