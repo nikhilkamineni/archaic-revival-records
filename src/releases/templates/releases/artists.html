@@ -4,9 +4,14 @@
 {% if artists %}
 <ul>
   {% for artist in artists %}
-  <li>{{artist.name}} - {{artist.genre}}</li>
+    <li>{{artist.name}} - {{artist.genre}}</li>
+
+    {% if artist.image %}
+      <img src="{{ MEDIA_URL }}/media/{{artist.image}}" />
+    {% endif %} 
+
   {% endfor %}
 </ul>
 {% else %}
-  <p>No artists</p>
+<p>No artists</p>
 {% endif %}

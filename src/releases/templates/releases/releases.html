@@ -4,7 +4,8 @@
 {% if releases %}
 <ul>
   {% for release in releases %}
-  <li>{{release.artist}} - {{release.title}}</li>
+    <li>{{release.artist}} - {{release.title}}</li>
+    <img src="{{ MEDIA_URL }}/media/{{ release.artwork }}" />
   {% endfor %}
 </ul>
 
