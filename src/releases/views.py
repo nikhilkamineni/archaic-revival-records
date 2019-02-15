@@ -20,3 +20,10 @@ def releases(request):
     context = {"releases": releases}
 
     return render(request, "releases/releases.html", context)
+
+
+def contact(request):
+    email = "archaicrevivalrecords@gmail.com"
+    context = {"email": email}
+
+    return render(request, "releases/contact.html", context)
